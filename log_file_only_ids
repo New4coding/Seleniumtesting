@@ -1,0 +1,13 @@
+import re
+
+file_location ="//Users//krishna//Desktop//di_log.txt"
+log_string = open(file_location, 'r')
+final_id_list=[]
+for line in log_string:
+    id = line.split('\'client_id\':')
+    final_id = id[1].split(',')
+    final_id[0] = final_id[0].replace('\'',"")
+
+    final_id_list.append(final_id[0])
+
+print(final_id_list)
