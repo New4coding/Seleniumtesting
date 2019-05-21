@@ -1,0 +1,25 @@
+import csv
+import os
+
+filelocation = os.getcwd()
+filename_1 = 'hfhs_client_id_di.csv'
+filename_2 = 'hfhs_unique_id_dt.csv'
+file1 = open(filelocation+'/'+filename_1, 'r')
+file2 = open(filelocation+'/'+filename_2, 'r')
+print(filelocation)
+print(file1)
+print(file2)
+
+file_read_1 = file1.readlines()
+file_read_2 = file2.readlines()
+
+print(len(file_read_1))
+print(len(file_read_2))
+
+for l in file_read_1:
+    if l in file_read_2:
+        pass
+    else:
+        print(l)
+
+
